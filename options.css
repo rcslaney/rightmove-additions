@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "Effra";
+    src: url("Effra_WLatn_Rg.woff2");
+}
+
+@font-face {
+    font-family: "Effra-Medium";
+    src: url("Effra_WLatn_Md.woff2");
+}
+
+* {
+    box-sizing: border-box;
+    min-width: 0;
+    font-family: "Effra";
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#title-box {
+    width: 540px;
+    background: #262637;
+    border-radius: 4px;
+    text-align: center;
+    padding: 24px;
+    margin: 48px auto 0 auto;
+}
+
+#title-box h1 {
+    font-family: "Effra-Medium";
+    margin: 0;
+    font-weight: normal;
+    color: #00DEB6;
+    font-size: 36px;
+    line-height: 50px;
+}
+
+#title-box h2 {
+    font-family: "Effra-Medium";
+    margin: 12px 0 6px;
+    font-weight: normal;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.section {
+    padding: 24px;
+    width: 720px;
+    margin: 48px auto 0 auto;
+    /* border: 1px solid #DFDFE1; */
+    box-shadow: 0 2px 8px 0 rgb(38 38 55 / 25%);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h3 {
+    color: #262637;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Effra-Medium";
+    font-weight: normal;
+    margin-top: 0;
+}
+
+input, select {
+    border: 1px solid #dfdfe1;
+    border-radius: 0;
+    height: 38px;
+    padding: 0 20px 0 10px;
+    position: relative;
+    font-size: 15px;
+    line-height: 38px;
+    color: #262637;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    font-size: 15px;
+    color: #262637;
+    border-radius: 2px;
+    text-align: center;
+    height: 38px;
+    padding: 0 30px;
+    /* margin-bottom: 12px; */
+    border: 0;
+    background: #00deb6;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-button-combo {
+    display: flex;
+}
+
+.input-button-combo input {
+    flex: 1;
+    margin-right: 12px;
+}
+
+p {
+    color: #53535F;
+    font-size: 16px;
+}
+
+.commuting-config h4 {
+    margin: 16px 0 2px 6px;
+    color: #717184;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: normal;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+}
+
+hr {
+    position: relative;
+    margin: 16px -24px;
+    background-color: #DFDFE1;
+    border: 0;
+    height: 1px;
+}
+
+.two-col {
+    display: flex;
+    gap: 16px;
+}
+
+.two-col div {
+    flex: 1;
+}
+
+.commuting-config-wrapper {
+    padding: 16px 0;
+}
+
+.commuting-config {
+    display: flex;
+    max-height: calc(100% - 16px);
+    overflow: hidden;
+    /* margin: 16px 0; */
+}
+
+.location-chooser-hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* .commuting-config button {
+    margin-top: 32px;
+} */
+
+.commuting-options {
+    flex: 1;
+    min-width: 0;
+}
+
+.commuting-options > h4:first-child {
+    margin-top: 8px;
+}
+
+.commuting-map {
+    text-indent: -1000;
+    background-color: #F5F5F5;
+    min-width: 0;
+    border-radius: 4px;
+    border: 1px solid #DFDFE1;
+    height: 220px;
+    margin: 6px 0 6px 24px;
+}
+
+.address {
+    width: 100%;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.select {
+    position: relative;
+    cursor: pointer;
+}
+
+.select::after {
+    pointer-events: none;
+    content: "\25BC";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #444;
+}
+
+location-chooser {
+    position: relative;
+    display: none;
+    transition: height 0.5s;
+}
+
+.show {
+    display: block;
+}
+
+.input-with-dropdown {
+    /* position: relative; */
+}
+
+.input-with-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    z-index: 10;
+    width: 100%;
+    border: 1px solid #DFDFE1;
+    border-radius: 0 0 4px 4px;
+    width: calc(100% - 220px - 24px);
+}
+
+.input-with-dropdown input:focus ~ .dropdown {
+    display: block;
+}
+
+.input-with-dropdown .dropdown:active {
+    display: block;
+}
+
+.input-with-dropdown .dropdown div {
+    cursor: pointer;
+    height: 38px;
+    padding: 0 20px 0 10px;
+    position: relative;
+    font-size: 15px;
+    line-height: 38px;
+    color: #262637;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.input-with-dropdown .dropdown div:hover {
+    background: #EEE;
+}
+
+#add-another {
+    font-size: 15px;
+    display: block;
+    margin-top: 20px;
+    color: #808080;
+}
+
+.add-another:hover {
+    color: #A0A0A0;
+}
+
+.info-box {
+    display: flex;
+    height: 0;
+    align-items: center;
+    padding: 0 12px;
+    background: #eee;
+    border-left-width: 6px;
+    border-left-style: solid;
+    transition: all 0.5s;
+    overflow: hidden;
+    margin: 0;
+}
+
+.info-box.success, .info-box.error {
+    height: 44px;
+    margin: 16px 0;
+}
+
+.info-box.success {
+    border-left-color: #00deb6;
+}
+
+.info-box.error {
+    border-left-color: red;
+}
+
+.info-box::before {
+    font-size: 22px;
+    line-height: 20px;
+    margin-right: 12px;
+}
+
+.info-box.error::before {
+    content: "\26A0";
+}
+
+.info-box.success::before {
+    content: "\2714";
+    font-size: 17px;
+    padding: 0 2px;
+}
+
+.error .main-text {
+    font-weight: bold;
+}
+
+.opts {
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+}
+
+.opts button {
+    margin: 0 auto 0 0;
+}
+
+.opts label {
+    margin-right: 4px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+.option-check {
+    display: flex;
+    align-items: center;
+}

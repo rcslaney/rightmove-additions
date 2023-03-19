@@ -1,0 +1,52 @@
+.routes-container {
+	display: grid;
+	grid-auto-flow: row;
+	align-items: center;
+    margin-bottom: 24px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgb(223, 223, 225);
+	font-size: 14px;
+}
+
+.route-title {
+	margin: 18px 0 2px 0;
+}
+
+.routes-container .divider {
+	grid-column: 1 / span 99;
+	border-top: 1px solid rgb(223, 223, 225);
+    padding: 8px 8px 2px 8px;
+    margin-top: 10px;
+}
+
+.routes-container .duration {
+	font-size: 16px;
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+.routes-container img {
+	width: 16px;
+	height: 16px;
+	margin: 3px;
+}
+
+.v-arrow {
+	margin: 0 4px 0 6px;
+	font-weight: lighter;
+	font-size: 20px;
+	color: #333;
+}
+
+.hr {
+	border-bottom: 1px solid rgb(223, 223, 225);
+    margin: 8px 0;
+}
+
+aside article > div:first-child {
+	border-top: 0!important;
+}
+
+.routes-container:not(.mode-transit) div:not(.divider) {
+	margin-right: 16px;
+}

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Rightmove Additions Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div id="title-box">
+        <h1>Rightmove Additions</h1>
+        <h2>Extension options</h2>
+    </div>
+    <div class="section">
+        <h3>Config</h3>
+        <hr>
+        <h4>General options</h4>
+        <div class="option-check"><input type="checkbox" id="layout-adjustment" class="layout-adjustment"><label for="layout-adjustment">Enable layout adjustment</label></div>
+        <h4>Google maps API key</h4>
+        <p>To use the commute times part of this extension you need to enter a Google Maps API key below. To get a Google Maps API key, follow the
+            instructions <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">here</a>.</p>
+        <p class="info-box" id="api-key-validation"></p>
+        <div class="input-button-combo">
+            <input type="text" class="api-key" placeholder="Google API Key" id="api-key">
+            <button id="api-key-save">Save</button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Commuting locations</h3>
+        <hr>
+        <p>Enter here the locations of places you want to know the travel time to - travel times and/or directions will
+            be shown for each location on the Rightmove listing.</p>
+        <span id="location-choosers">
+        </span>
+        <hr style="margin-top: 0;">
+        <a href="#" id="add-another">+ Add another</a>
+        <div class="address-results"></div>
+        <div class="place-details"></div>
+    </div>
+
+    <template id="location-chooser-template">
+        <hr class="location-chooser-hr">
+        <div class="commuting-config-wrapper">
+        <div class="commuting-config">
+            <div class="commuting-options">
+                <h4>Location</h4>
+                <div class="input-with-dropdown">
+                    <input type="text" size="1" class="address" placeholder="123 Sample Street, London">
+                    <div class="dropdown"></div>
+                </div>
+                <div class="two-col">
+                    <div>
+                        <h4>Time</h4>
+                        <div class="select"><select class="time"></select></div>
+                    </div>
+                    <div>
+                        <h4>Mode</h4>
+                        <div class="select">
+                            <select class="mode">
+                                <option value="driving">Driving</option>
+                                <option value="walking">Walking</option>
+                                <option value="bicycling">Cycling</option>
+                                <option value="transit">Public transport</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="opts">
+                    <button>Delete</button>
+                    <input type="checkbox" name="show-alternative-routes" title="Show all alternative routes if checked. If not will just show first route." class="show-alternative-routes">
+                    <label for="show-all-routes" title="Show all alternative routes if checked. If not will just show first route.">Show alternative routes</label>
+                </div>
+            </div>
+            <img class="commuting-map" alt="">
+        </div>
+    </div>
+    </template>
+    <script type="text/javascript" src="options.js"></script>
+</body>
+
+</html>
